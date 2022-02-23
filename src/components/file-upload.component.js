@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import API_URL from '../services/auth.service';
 export default class FilesUploadComponent extends Component {
 
     constructor(props) {
@@ -41,7 +41,7 @@ export default class FilesUploadComponent extends Component {
             }
         }
         //axios.post("https://maglab.herokuapp.com/upload", formData, config, {
-        axios.post("http://localhost:8080/upload", formData, config, {
+        axios.post(API_URL, formData, config, {
         }).then(res => {
             console.log(res)
             this.setState({ status: res.data.message})

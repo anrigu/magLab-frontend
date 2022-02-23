@@ -7,6 +7,8 @@ import {
   Marker,
   InfoWindow
 } from "react-google-maps"
+import API_URL from '../services/auth.service';
+
 
 const MapWithAMarker = compose(withScriptjs, withGoogleMap)(props => {
 
@@ -59,7 +61,7 @@ export default class ShelterMap extends Component {
   }
   
   componentDidMount() {
-    fetch("http://localhost:8080/browse")
+    fetch(API_URL)
       .then(r => r.json())
       .then(data => {
         console.log(data)
