@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from "connected-react-router";
 import MainLayout from "./v2/util/MainLayout";
 import MapContainer from "./v2/maps/MapContainer";
+import CalendarContainer from "./v2/calendar/CalendarContainer";
 
 const theme = createTheme({
     palette: {
@@ -38,6 +39,9 @@ function App() {
                         </Route>
                         <Route exact path="/maps">
                             <MainLayout Component={<MapContainer />} />
+                        </Route>
+                        <Route exact path="/calendar">
+                            <MainLayout Component={<CalendarContainer />} />
                         </Route>
                         <Route path="/">
                             <MainLayout Component={<LandingPage />} />

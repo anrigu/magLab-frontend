@@ -55,6 +55,11 @@ export default function NavBar() {
                         Map
                     </Typography>
                 </Button>
+                <Button onClick={() => history.push('/calendar')}>
+                    <Typography variant="overline">
+                        Calendar
+                    </Typography>
+                </Button>
                 <Button>
                     <Typography variant="overline">
                         Sign up
